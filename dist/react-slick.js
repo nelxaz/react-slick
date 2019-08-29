@@ -560,29 +560,29 @@
                     settings.slidesToScroll = 1;
                   } // force showing one slide and scrolling by one if the fade mode is on
 
-                  if (settings.fade) {
-                    if (settings.slidesToShow > 1 && "none" !== "production") {
-                      console.warn(
-                        "slidesToShow should be equal to 1 when fade is true, you're using ".concat(
-                          settings.slidesToShow
-                        )
-                      );
-                    }
-
-                    if (
-                      settings.slidesToScroll > 1 &&
-                      "none" !== "production"
-                    ) {
-                      console.warn(
-                        "slidesToScroll should be equal to 1 when fade is true, you're using ".concat(
-                          settings.slidesToScroll
-                        )
-                      );
-                    }
-
-                    settings.slidesToShow = 1;
-                    settings.slidesToScroll = 1;
-                  } // makes sure that children is an array, even when there is only 1 child
+                  // if (settings.fade) {
+                  //   if (settings.slidesToShow > 1 && "none" !== "production") {
+                  //     console.warn(
+                  //       "slidesToShow should be equal to 1 when fade is true, you're using ".concat(
+                  //         settings.slidesToShow
+                  //       )
+                  //     );
+                  //   }
+                  //
+                  //   if (
+                  //     settings.slidesToScroll > 1 &&
+                  //     "none" !== "production"
+                  //   ) {
+                  //     console.warn(
+                  //       "slidesToScroll should be equal to 1 when fade is true, you're using ".concat(
+                  //         settings.slidesToScroll
+                  //       )
+                  //     );
+                  //   }
+                  //
+                  //   settings.slidesToShow = 1;
+                  //   settings.slidesToScroll = 1;
+                  // } // makes sure that children is an array, even when there is only 1 child
 
                   var children = react__WEBPACK_IMPORTED_MODULE_0___default.a.Children.toArray(
                     this.props.children
