@@ -112,23 +112,23 @@ export default class Slider extends React.Component {
       settings.slidesToScroll = 1;
     }
     // force showing one slide and scrolling by one if the fade mode is on
-    if (settings.fade) {
-      if (settings.slidesToShow > 1 && process.env.NODE_ENV !== "production") {
-        console.warn(
-          `slidesToShow should be equal to 1 when fade is true, you're using ${settings.slidesToShow}`
-        );
-      }
-      if (
-        settings.slidesToScroll > 1 &&
-        process.env.NODE_ENV !== "production"
-      ) {
-        console.warn(
-          `slidesToScroll should be equal to 1 when fade is true, you're using ${settings.slidesToScroll}`
-        );
-      }
-      settings.slidesToShow = 1;
-      settings.slidesToScroll = 1;
-    }
+    // if (settings.fade) {
+    //   if (settings.slidesToShow > 1 && process.env.NODE_ENV !== "production") {
+    //     console.warn(
+    //       `slidesToShow should be equal to 1 when fade is true, you're using ${settings.slidesToShow}`
+    //     );
+    //   }
+    //   if (
+    //     settings.slidesToScroll > 1 &&
+    //     process.env.NODE_ENV !== "production"
+    //   ) {
+    //     console.warn(
+    //       `slidesToScroll should be equal to 1 when fade is true, you're using ${settings.slidesToScroll}`
+    //     );
+    //   }
+    //   settings.slidesToShow = 1;
+    //   settings.slidesToScroll = 1;
+    // }
 
     // makes sure that children is an array, even when there is only 1 child
     let children = React.Children.toArray(this.props.children);
@@ -202,7 +202,11 @@ export default class Slider extends React.Component {
       settings.unslick = true;
     }
     return (
-      <InnerSlider style={this.props.style} ref={this.innerSliderRefHandler} {...settings}>
+      <InnerSlider
+        style={this.props.style}
+        ref={this.innerSliderRefHandler}
+        {...settings}
+      >
         {newChildren}
       </InnerSlider>
     );
